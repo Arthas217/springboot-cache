@@ -41,7 +41,8 @@ public class EmployeeService {
     EmployeeMapper employeeMapper;
 
     //先获取key，然后执行目标方法，再放入缓存
-    @Cacheable(cacheNames = {"emp"},
+    @Cacheable(
+//            cacheNames = {"emp"},
 //            keyGenerator = "myKeyGenerator",
             condition = "#id>0",
             unless = "#id<0")
