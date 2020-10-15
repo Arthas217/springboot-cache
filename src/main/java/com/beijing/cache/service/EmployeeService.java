@@ -26,7 +26,7 @@ import org.springframework.stereotype.Service;
  * cacheNames/values 指定缓存组件的名字，返回结果放在哪个缓存中，可以指定多个名字
  * key 如key = "#root.args[0]", #id, #a0 ；自定义key= getEmp[2]  key = "#root.methodName"+'['+'#id'+']'
  * keyGenerator自定义key  参考MyCacheKeyConfig类
- * /cacheManager/cacheResolver c缓存管理器
+ * /cacheManager/cacheResolver 缓存管理器
  * /condition 符合条件情况下有缓存  condition = "#id>1"
  * unless 指定条件为true，返回的值不会被缓存
  * sync 异步模式  时unless失效
@@ -34,7 +34,7 @@ import org.springframework.stereotype.Service;
  * @Date 2020/10/15
  */
 @Service
-@CacheConfig(cacheNames = "emp")
+@CacheConfig(cacheNames = "emp",cacheManager = "employeeCacheManager")
 public class EmployeeService {
 
     @Autowired
