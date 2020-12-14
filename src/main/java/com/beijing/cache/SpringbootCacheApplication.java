@@ -16,7 +16,7 @@ import org.springframework.cache.annotation.EnableCaching;
  *   1）开启注解的缓存
  *   2）标注缓存注解  @Cacheable/@CacheEvict/@CachePut
  *
- *
+ * http://doc.redisfans.com/
  * 整合redis缓存
  *  1. 引入starter依赖，配置redis主机
  *  2. RedisAutoConfiguration自动配置生效  (RedisTemplate/StringRedisTemplate操作redis)

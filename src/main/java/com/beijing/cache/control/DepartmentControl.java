@@ -17,9 +17,10 @@ public class DepartmentControl {
     @Autowired
     DepartmentService departmentService;
 
+    // http://localhost:8080/dept/1
     @GetMapping("/dept/{id}")
-    public Department getDetpById(@PathVariable("id") Integer id) {
-        return departmentService.getDeptById(id);
-//        return departmentService.getDeptById2(id);
+    public Department getDeptById(@PathVariable("id") Integer id) {
+//        return departmentService.getDeptById(id);
+        return departmentService.getDeptById2(id);
     }
 }

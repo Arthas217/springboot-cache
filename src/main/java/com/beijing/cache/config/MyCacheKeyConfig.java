@@ -8,7 +8,8 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 
 /**
- * 自定义生成cache中的key值使用KeyGenerator接口
+ * 自定义生成cache中的key值
+ * 使用KeyGenerator接口
  *
  * @Author zc217
  * @Date 2020/10/15
@@ -21,7 +22,9 @@ public class MyCacheKeyConfig {
         return new KeyGenerator() {
             @Override
             public Object generate(Object target, Method method, Object... params) {
-                return method.getName() + '[' + Arrays.asList(params).toString() + ']';
+                // key = emp-getEmp[[1]]
+//                return method.getName() + '[' + Arrays.asList(params).toString() + ']';
+                return method.getName() + ':' + params;
             }
         };
     }

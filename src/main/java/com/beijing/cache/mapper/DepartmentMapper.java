@@ -4,6 +4,7 @@ import com.beijing.cache.bean.Department;
 import org.apache.ibatis.annotations.Select;
 
 /**
+ * 注解版mybatis
  * @Author zc217
  * @Date 2020/10/15
  */
